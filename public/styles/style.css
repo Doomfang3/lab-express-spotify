@@ -1,38 +1,39 @@
-#home-page {
+/* home page css */
+body {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
-}
-
-.layout-page {
-    background-image: url("/images/spotify-background.jpeg");
-    background-size: contain;
-    background-position: center;
-    height:  100vh;
+    height: 100vh;
 }
 
 #layout-text {
+    font-size: 70px;
     display: flex;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 340px;
     justify-content: center;
-    font-size: 50px;
+    margin: 5px;
+    padding: 10px;
 }
 
-#home-Btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
+div {
+    margin-top: 50px;
 }
 
-input {
+#search-bar{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 350px;
     padding: 10px;
-    border: 1px;
+    border: none;
+    background-color: rgb(255,255,255,0.55);
+    
 }
 
 #submit-Btn {
@@ -40,5 +41,81 @@ input {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    margin-left: 120px;
+    margin-left: 19vh;
+    width: 150px;
+    height: 30px;
+    background-image: url("/images/fire.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+
+#home-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* artist search results page css */
+#artist-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.artist-text {
+    color: white;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-bottom: 100vh;
+
+}
+
+#artist-result img{
+    max-width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+#artist-result ul{
+    display: grid;
+    grid-template-columns: repeat(9 , 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/*targeting the "li" artist info */
+#artist-result li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 160px;
+    padding: 5px;
+    font-size: 14px;
+    
+}
+
+/* targeting the margins of the artists name */
+#artist-result ul > li h4.artits-name {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+.albums-Btn {
+
+    background-image: url("/images/blue.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
 }
