@@ -1,0 +1,14 @@
+<div id="album-search">
+    <h1>Albums</h1>
+    <ul>
+    <% albumResult.forEach((album) => { %> 
+        <% if (album.images) { %>
+    <img src="<%- album.images[0]%> alt="<%- album.name %>"> 
+    <% } else { %>
+    <img src="/images/backgroung.jpeg" alt="Image Logo" />
+    <% } %>
+    <h2><%-album.name%></h2>
+    <button><a href="<%-`/tracks/${album.id}`%>"">View Tracks</a></button>
+    <%})%>
+    </ul>
+  </div>
