@@ -1,0 +1,6 @@
+<h4><%- track.name %></h4>
+<% let artistsName = ''; track.artists.forEach((artist, index, arr) => { let
+mark = ', '; if(index === arr.length - 1 ) mark = '' ;artistsName += artist.name
++ mark}) %>
+<p><%- artistsName %></p>
+<audio controls preload="metadata" src="<%- track.previewUrl %>"></audio>

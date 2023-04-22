@@ -1,0 +1,5 @@
+<ul>
+	<% artistsInfoClean.forEach(artist => { %>
+	<li><%- include("partials/artistCard", {artist}) %></li>
+	<% }); %>
+</ul>
