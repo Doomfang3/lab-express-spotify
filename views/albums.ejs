@@ -1,14 +1,16 @@
-<div id="album-search">
-    <h1>Albums</h1>
+<div id="album-result">
+    <h2 class="album-text">Albums</h2>
     <ul>
-    <% albumResult.forEach((album) => { %> 
-        <% if (album.images) { %>
-    <img src="<%- album.images[0]%> alt="<%- album.name %>"> 
-    <% } else { %>
-    <img src="/images/backgroung.jpeg" alt="Image Logo" />
-    <% } %>
-    <h2><%-album.name%></h2>
-    <button><a href="<%-`/tracks/${album.id}`%>"">View Tracks</a></button>
-    <%})%>
+        <% albumResult.forEach((album)=> { %>
+            <li>
+                <% if (album.images.length> 0) { %>
+                    <img src="<%- album.images[0].url%>" alt="<%- album.name %>">
+                    <% } else { %>
+                        <img src="/images/backgroung.jpeg" alt="Image Logo">
+                        <% } %>
+                            <h4 class="album-name"><%-album.name%></h4>
+                            <button class="track-Btn"><a href="<%-`/tracks/${album.id}`%>"">View Tracks</a></button>
+                            <%})%>
+                        </li>
     </ul>
   </div>
