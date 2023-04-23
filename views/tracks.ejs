@@ -1,0 +1,5 @@
+<ul>
+	<% tracksInfoClean.forEach(track => { %>
+	<li><%- include("partials/trackCard", {track}) %></li>
+	<% }); %>
+</ul>

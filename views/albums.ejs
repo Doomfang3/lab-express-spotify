@@ -1,0 +1,5 @@
+<ul>
+	<% albumsInfoClean.forEach(album => { %>
+	<li><%- include("partials/albumCard", {album}) %></li>
+	<% }); %>
+</ul>
