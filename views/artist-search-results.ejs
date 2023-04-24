@@ -1,0 +1,9 @@
+<ul>
+    <% artistDataToRender.forEach(eachArtistData => { %>
+        <li>
+            <img src="<%- eachArtistData.img %>" alt="" height="200" width="200">
+            <h3><%- eachArtistData.name %></h3>
+            <a href="/albums/<%- eachArtistData.id %>">View Albums</a>
+        </li>
+    <% }) %>
+</ul>
