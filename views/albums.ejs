@@ -1,0 +1,10 @@
+<h1>Albums for:</h1>
+<ul>
+    <% albumDataToRender.forEach(eachAlbumData => { %>
+        <li>
+            <img src="<%- eachAlbumData.img %>" alt="" height="200" width="200">
+            <h3><%- eachAlbumData.name %></h3>
+            <a href="/albums/<%- eachAlbumData.id %>">View Tracks</a>
+        </li>
+    <% }) %>
+</ul>
