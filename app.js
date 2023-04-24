@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 // GET Route to create form
 app.get("/artist-search", (req, res) => {
   const artistsQuery = req.query.artist;
-  console.log(artistsQuery);
+  console.log("Here is the artist query" , artistsQuery);
 
   spotifyApi
     .searchArtists(artistsQuery)
